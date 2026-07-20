@@ -1,0 +1,19 @@
+# Works with `podman-compose up -d` and `docker compose up -d`.
+services:
+  yt-watcher:
+    image: ghcr.io/serisium/yt-watcher:latest
+    command:
+      # One or more playlist URLs; each gets its own folder under /media
+      - "https://www.youtube.com/playlist?list=PLXeIIajkQOe_3PXThVaP0dxMLYv6gcdyz"
+      # - "https://www.youtube.com/playlist?list=ANOTHER_PLAYLIST_ID"
+    environment:
+      POLL_INTERVAL: "3600"       # seconds between playlist polls
+      MAX_HEIGHT: "1440"          # quality cap (2K); lower to save bandwidth
+      # FILENAME_TEMPLATE: "{artist} - {title}"
+      # COOKIES_FILE: /config/cookies.txt
+      TZ: "America/Chicago"
+    volumes:
+      # Append :Z on SELinux hosts (Fedora/RHEL), e.g. ./media:/media:Z
+      - ./media:/media
+      - ./config:/config
+    restart: unless-stopped

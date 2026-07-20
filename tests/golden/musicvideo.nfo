@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<musicvideo>
+  <title>Never Gonna Give You Up</title>
+  <artist>Rick Astley</artist>
+  <album>Test Playlist</album>
+  <plot>The official video for “Never Gonna Give You Up”</plot>
+  <premiered>2009-10-25</premiered>
+  <aired>2009-10-25</aired>
+  <year>2009</year>
+  <studio>Rick Astley</studio>
+  <runtime>4</runtime>
+  <uniqueid type="youtube" default="true">abc123XYZ_-</uniqueid>
+  <thumb>Rick Astley - Never Gonna Give You Up-thumb.jpg</thumb>
+</musicvideo>
